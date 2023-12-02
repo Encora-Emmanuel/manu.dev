@@ -1,6 +1,0 @@
-package-lock.json
-.cache/
-public/
-dist/
-build/
-coverage/
