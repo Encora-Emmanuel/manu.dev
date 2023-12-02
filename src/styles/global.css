@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  padding: 2rem 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Avenir", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@keyframes wallpaper {
+  0% {
+    background-size: 101% 101%;
+    background-position: 10% 50%;
+  }
+
+  10% {
+    background-size: 135% 135%;
+    background-position: 65% 20%;
+  }
+
+  20% {
+    background-size: 105% 105%;
+    background-position: 60% 25%;
+  }
+
+  30% {
+    background-size: 160% 160%;
+    background-position: 15% 15%;
+  }
+
+  40% {
+    background-size: 190% 190%;
+    background-position: 10% 20%;
+  }
+
+  50% {
+    background-size: 320% 320%;
+    background-position: 45% 50%;
+  }
+
+  60% {
+    background-size: 250% 250%;
+    background-position: 45% 30%;
+  }
+
+  70% {
+    background-size: 165% 165%;
+    background-position: 60% 35%;
+  }
+
+  80% {
+    background-size: 120% 120%;
+    background-position: 80% 80%;
+  }
+
+  90% {
+    background-size: 99% 99%;
+    background-position: 20% 20%;
+  }
+
+  100% {
+    background-size: 101% 101%;
+    background-position: 10% 50%;
+  }
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  opacity: 0.5;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  background: rgb(79, 26, 165);
+  background: radial-gradient(
+    circle at 0 0,
+    rgb(43, 1, 116) 0%,
+    rgb(68, 8, 146) 20%,
+    rgba(39, 27, 208) 50%,
+    rgba(39, 183, 219) 70%
+  );
+  /* animation: wallpaper 90s 1.5s ease infinite; */
+}
+
+#___gatsby {
+  height: 100%;
+  max-height: 2000px;
+}
+
+#gatsby-focus-wrapper {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+blockquote {
+  border-left: 0.2rem solid #dfe2e5;
+  margin-left: 1rem;
+  padding: 0 1rem;
+  color: #6a737d;
+  /* Using `!important` to override this in any place. That seems like a reasonable assumption */
+  text-align: left !important;
+}
+
+@media (max-width: 640px) {
+  body {
+    /* Mobile browers are going to have their bottom nav hide the bottom of the screen. Plus, since we aren't scrolling the <body> at all, it's never going to go away. So we have to bump the content up to make it peek out from the browser's nav */
+    /* So, these two will effectively make the top and bottom padding .5rem (it seems like there's about 7rem of height of the browser's bottom nav) */
+    padding-bottom: 7.5rem;
+    padding-top: 0.5rem;
+  }
+}
