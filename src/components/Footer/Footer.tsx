@@ -11,7 +11,7 @@ export const Footer: FunctionComponent = () => {
   const { t } = useTranslation(["translation", "common"]);
 
   return (
-    <Toolbar style={{ position: "fixed", bottom: "0px" }}>
+    <Toolbar>
       <Box sx={ss.container}>
         <Box component="section" sx={ss.left}>
           <Box sx={ss.footerBox}>
@@ -82,6 +82,9 @@ const ss = stylesheet({
     gap: "16px",
     padding: "16px",
     justifyContent: "space-between",
+    "@media (max-width: 600px)": {
+      flexDirection: "column",
+    },
   },
   left: () => ({
     height: "100%",
@@ -105,6 +108,10 @@ const ss = stylesheet({
     display: "flex",
     gap: "100px",
     textAlign: "center",
+    "@media (max-width: 600px)": {
+      flexDirection: "column",
+      gap: "20px",
+    },
   },
   disclaimer: {
     fontSize: "14px",
@@ -116,5 +123,6 @@ const ss = stylesheet({
   footerBoxRightIcons: {
     display: "flex",
     textAlign: "center",
+    justifyContent: "space-between",
   },
 });

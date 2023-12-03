@@ -28,29 +28,32 @@ export const ProfileCard: FunctionComponent = () => {
         <Typography sx={ss.name}>{t("profile_card.name")}</Typography>
         <Divider sx={ss.divider} />
         <Typography sx={ss.title}>{t("profile_card.title")}</Typography>
-      </Box>
-      <Box sx={ss.actions}>
-        <IconButton
-          LinkComponent={Link}
-          href={t("footer.social_media.linkedin")}
-          target="_blank"
-        >
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton
-          LinkComponent={Link}
-          href={t("footer.social_media.github")}
-          target="_blank"
-        >
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          LinkComponent={Link}
-          href={t("footer.social_media.instagram")}
-          target="_blank"
-        >
-          <InstagramIcon />
-        </IconButton>
+        <Box sx={ss.actions}>
+          <IconButton
+            LinkComponent={Link}
+            href={t("footer.social_media.linkedin")}
+            target="_blank"
+            sx={ss.iconButton}
+          >
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton
+            LinkComponent={Link}
+            href={t("footer.social_media.github")}
+            target="_blank"
+            sx={ss.iconButton}
+          >
+            <GitHubIcon />
+          </IconButton>
+          <IconButton
+            LinkComponent={Link}
+            href={t("footer.social_media.instagram")}
+            target="_blank"
+            sx={ss.iconButton}
+          >
+            <InstagramIcon />
+          </IconButton>
+        </Box>
       </Box>
     </Fragment>
   );
@@ -72,7 +75,7 @@ const ss = stylesheet({
     height: "200px",
     width: "200px",
   },
-  name: { fontsize: "27px", fontWeight: "bold" },
+  name: { fontSize: "27px", fontWeight: "bold" },
   title: {
     fontSize: "17px",
     textTransform: "uppercase",
@@ -81,9 +84,13 @@ const ss = stylesheet({
   divider: { width: "50px", height: "2px", background: Color.CoolBlue },
   actions: {
     display: "flex",
-    width: "100%",
     justifyContent: "center",
-    gap: "20px",
-    background: Color.White,
+    marginTop: "20px",
+  },
+  iconButton: {
+    color: Color.White,
+    "&:hover": {
+      background: "transparent",
+    },
   },
 });

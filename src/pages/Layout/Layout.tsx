@@ -16,7 +16,11 @@ export const Layout: FunctionComponent = () => {
   return (
     <Box sx={ss.container}>
       <Header data-testid="layout_header" />
-      <main>{<Outlet />}</main>
+      <Box sx={ss.content}>
+        <main>
+          <Outlet />
+        </main>
+      </Box>
       <Footer data-testid="layout_footer" />
     </Box>
   );
@@ -28,6 +32,12 @@ const ss = stylesheet({
     height: "100%",
     display: "flex",
     flexDirection: "column",
+    position: "relative",
+    top: "30px",
+    gap: "30px",
+  },
+  content: {
+    flex: 1,
     padding: "20px",
   },
 });

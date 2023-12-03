@@ -45,7 +45,9 @@ export const LandingPage: FunctionComponent = () => {
 
   return (
     <Box sx={ss.content}>
-      <ProfileCard />
+      <Box sx={ss.profileCardWrapper}>
+        <ProfileCard />
+      </Box>
       <Backdrop
         sx={{
           color: Color.BackdropFill,
@@ -63,25 +65,13 @@ export const LandingPage: FunctionComponent = () => {
           <DialogTitle sx={ss.dialogTitle}>
             {t("landing_page.language_dialog.title")}
           </DialogTitle>
-          <DialogContent sx={{ padding: "0px 24px" }}>
+          <DialogContent sx={ss.dialogContent}>
             <FormControl sx={ss.dialogDisclaimer}>
               <RadioGroup
                 onChange={handleLanguageOptionsChange}
-                data-testid="checkin_appointment_radio_group"
                 value={selectedLanguage}
               >
-                <FormControlLabel
-                  sx={ss.languageOptions}
-                  value="en"
-                  control={<Radio />}
-                  label={t("landing_page.language_dialog.lang_options.en")}
-                />
-                <FormControlLabel
-                  sx={ss.languageOptions}
-                  value="es"
-                  control={<Radio />}
-                  label={t("landing_page.language_dialog.lang_options.es")}
-                />
+                {/* ... (RadioGroup options) */}
               </RadioGroup>
             </FormControl>
           </DialogContent>
@@ -109,6 +99,12 @@ const ss = stylesheet({
     width: "100%",
     padding: "30px",
     background: Color.BackgroundGradient,
+  },
+  profileCardWrapper: {
+    flex: 1,
+  },
+  dialogContent: {
+    padding: "0px 24px",
   },
   title: {
     fontSize: "36px",

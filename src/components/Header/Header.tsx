@@ -39,7 +39,7 @@ export const Header: FunctionComponent = () => {
         </Stack>
       </Box>
       <Box component="section" sx={ss.right}>
-        <Stack sx={ss.stack}>
+        <Stack direction="row" spacing={2}>
           <Button sx={ss.buttons}>{t("header.buttons.about_me")}</Button>
           <Button sx={ss.buttons}>{t("header.buttons.resume")}</Button>
           <Button sx={ss.buttons}>{t("header.buttons.contact")}</Button>
@@ -58,6 +58,9 @@ const ss = stylesheet({
     gap: "16px",
     padding: "16px",
     justifyContent: "space-between",
+    "@media (max-width: 600px)": {
+      flexDirection: "column",
+    },
   },
   left: () => ({
     height: "100%",
@@ -92,10 +95,10 @@ const ss = stylesheet({
     fontSize: "17px",
     textTransform: "uppercase",
     color: Color.MediumGray,
+    letterSpacing: "0.25em",
   },
   buttons: {
     fontSize: "14px",
     textTransform: "uppercase",
-    color: Color.CoolBlue,
   },
 });
