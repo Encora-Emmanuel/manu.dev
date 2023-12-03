@@ -18,6 +18,7 @@ import { Color } from "../../styles/colors";
 
 import { useTranslation } from "react-i18next";
 import { useLanguageContext } from "../../providers/CustomProvider";
+import { ProfileCard } from "../../components/ProfileCard/ProfileCard";
 
 export const LandingPage: FunctionComponent = () => {
   const { t } = useTranslation(["translation", "common"]);
@@ -44,9 +45,7 @@ export const LandingPage: FunctionComponent = () => {
 
   return (
     <Box sx={ss.content}>
-      <Typography data-testid="landingPage_typography_title" sx={ss.title}>
-        {t("landing_page.title")}
-      </Typography>
+      <ProfileCard />
       <Backdrop
         sx={{
           color: Color.BackdropFill,
@@ -104,12 +103,12 @@ export const LandingPage: FunctionComponent = () => {
 const ss = stylesheet({
   content: {
     textAlign: "center",
-    gap: "24px",
     display: "flex",
     flexDirection: "column",
-    height: "1000px",
+    height: "100%",
     width: "100%",
-    padding: "20px",
+    padding: "30px",
+    background: Color.BackgroundGradient,
   },
   title: {
     fontSize: "36px",

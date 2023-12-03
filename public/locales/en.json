@@ -10,12 +10,16 @@
       "projects": "Projects"
     }
   },
+  "profile_card": {
+    "name": "Emmanuel Rosa Sarachini de Oliveira",
+    "title": "Full Stack Software Engineer"
+  },
   "footer": {
     "disclaimer": "© 2023 by Emmanuel Rosa Sarachini de Oliveira.",
     "disclaimer2": "This website is a work in progress.",
     "social_media": {
       "call": "Call",
-      "phone": "+55 11 9 97015-1808",
+      "phone": "+55 11 97015-1808",
       "email": "Write",
       "email_address": "eoliveira95@gmail.com",
       "follow": "Follow",

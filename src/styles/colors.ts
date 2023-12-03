@@ -21,8 +21,7 @@ export const Color = {
   TextLightSecondary: "#737373",
   TextDisabled: "rgba(16, 17, 28, 0.68)",
   TextPrimary: "rgba(16, 17, 28, 0.87)",
-  BackGroundDisabled: "rgba(16, 17, 28, 0.12)",
-  CalendarIcon: "rgba(16, 17, 28, 0.56)",
   BackdropFill: "rgba(16, 17, 28, 0.75)",
-  BackgroundConfirmationDisclaimers: "rgba(171, 172, 176, 0.12)",
+  BackgroundGradient: "linear-gradient(90deg, #1400FF 0%, #9D32D5 100%)",
+  BackgroundGradientLight: "linear-gradient(90deg, #2C19FC 0%, #B238F2 100%)",
 } as const;

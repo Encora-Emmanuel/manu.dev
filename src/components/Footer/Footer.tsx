@@ -1,9 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { Toolbar, Typography, Box } from "@mui/material";
+import { Toolbar, Typography, Box, IconButton } from "@mui/material";
 import { stylesheet } from "../../styles/stylesheet";
-import { Color } from "../../styles/colors";
 import { useTranslation } from "react-i18next";
-import { IconButton } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -45,22 +43,22 @@ export const Footer: FunctionComponent = () => {
               </Typography>
               <Box sx={ss.footerBoxRightIcons}>
                 <IconButton
-                  component={Link}
-                  to={t("footer.social_media.linkedin")}
+                  LinkComponent={Link}
+                  href={t("footer.social_media.linkedin")}
                   target="_blank"
                 >
                   <LinkedInIcon />
                 </IconButton>
                 <IconButton
-                  component={Link}
-                  to={t("footer.social_media.github")}
+                  LinkComponent={Link}
+                  href={t("footer.social_media.github")}
                   target="_blank"
                 >
                   <GitHubIcon />
                 </IconButton>
                 <IconButton
-                  component={Link}
-                  to={t("footer.social_media.instagram")}
+                  LinkComponent={Link}
+                  href={t("footer.social_media.instagram")}
                   target="_blank"
                 >
                   <InstagramIcon />
