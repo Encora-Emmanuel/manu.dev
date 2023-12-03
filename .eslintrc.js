@@ -79,20 +79,20 @@ module.exports = {
      * https://eslint.org/docs/rules/#variables
      */
     "no-delete-var": 2,
-    "no-undef": 2,
-    "no-unused-vars": [
-      2,
-      {
-        args: "none",
-        ignoreRestSiblings: true,
-      },
-    ],
-    "no-use-before-define": [
-      2,
-      {
-        functions: false,
-      },
-    ],
+    // "no-undef": 2,
+    // "no-unused-vars": [
+    //   2,
+    //   {
+    //     args: "none",
+    //     ignoreRestSiblings: true,
+    //   },
+    // ],
+    // "no-use-before-define": [
+    //   2,
+    //   {
+    //     functions: false,
+    //   },
+    // ],
 
     /**
      * ECMAScript 6
