@@ -11,7 +11,6 @@ import {
   FormControlLabel,
   Radio,
   RadioGroup,
-  Typography,
 } from "@mui/material";
 import { stylesheet } from "../../styles/stylesheet";
 import { Color } from "../../styles/colors";
@@ -71,7 +70,24 @@ export const LandingPage: FunctionComponent = () => {
                 onChange={handleLanguageOptionsChange}
                 value={selectedLanguage}
               >
-                {/* ... (RadioGroup options) */}
+                <FormControlLabel
+                  sx={ss.languageOptions}
+                  value="en"
+                  control={<Radio />}
+                  label={t("landing_page.language_dialog.lang_options.en")}
+                />
+                <FormControlLabel
+                  sx={ss.languageOptions}
+                  value="pt_BR"
+                  control={<Radio />}
+                  label={t("landing_page.language_dialog.lang_options.pt_br")}
+                />
+                <FormControlLabel
+                  sx={ss.languageOptions}
+                  value="fr"
+                  control={<Radio />}
+                  label={t("landing_page.language_dialog.lang_options.fr")}
+                />
               </RadioGroup>
             </FormControl>
           </DialogContent>
@@ -95,13 +111,14 @@ const ss = stylesheet({
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
-    height: "100%",
-    width: "100%",
-    padding: "30px",
-    background: Color.BackgroundGradient,
   },
   profileCardWrapper: {
     flex: 1,
+    height: "100%",
+    display: "flex",
+    "@media (max-width: 600px)": {
+      flexDirection: "column",
+    },
   },
   dialogContent: {
     padding: "0px 24px",

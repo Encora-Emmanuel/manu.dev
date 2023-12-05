@@ -14,7 +14,9 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: "/locales/{{lng}}.json",
+      loadPath: "/locales/{{lng}}.json", // Adjust the path based on your setup
+      // The line below might be necessary if your public directory is not the base path
+      // loadPath: `${window.location.origin}/public/locales/{{lng}}.json`,
     },
   });
 

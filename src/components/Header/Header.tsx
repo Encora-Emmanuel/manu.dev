@@ -1,18 +1,22 @@
 import React from "react";
 import { FunctionComponent } from "react";
-import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Divider,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
+import LanguageIcon from "@mui/icons-material/Language";
 
 import { Color } from "../../styles/colors";
 import { stylesheet } from "../../styles/stylesheet";
 
-import {
-  useLanguageContext,
-  useThemeContext,
-} from "../../providers/CustomProvider";
+import { useLanguageContext } from "../../providers/CustomProvider";
 import { useTranslation } from "react-i18next";
 
 export const Header: FunctionComponent = () => {
-  const { setBackground } = useThemeContext();
   const { setShowLanguageModal } = useLanguageContext();
   const { t } = useTranslation(["translation", "common"]);
 
@@ -23,7 +27,7 @@ export const Header: FunctionComponent = () => {
   return (
     <Box sx={ss.container}>
       <Box component="section" sx={ss.left}>
-        <div
+        {/* <div
           style={{
             height: "16px",
             width: "16px",
@@ -36,14 +40,12 @@ export const Header: FunctionComponent = () => {
           <Typography sx={ss.title}>{t("header.title")}</Typography>
           <Divider sx={ss.divider} />
           <Typography sx={ss.subtitle}>{t("header.subtitle")}</Typography>
-        </Stack>
+        </Stack> */}
       </Box>
       <Box component="section" sx={ss.right}>
-        <Stack direction="row" spacing={2}>
-          <Button sx={ss.buttons}>{t("header.buttons.about_me")}</Button>
-          <Button sx={ss.buttons}>{t("header.buttons.resume")}</Button>
-          <Button sx={ss.buttons}>{t("header.buttons.contact")}</Button>
-        </Stack>
+        <IconButton onClick={handleClick} sx={ss.buttons} aria-label="Language">
+          <LanguageIcon sx={{ fill: "#B238F2" }} />
+        </IconButton>
       </Box>
     </Box>
   );
@@ -53,14 +55,11 @@ const ss = stylesheet({
   container: {
     display: "flex",
     flexDirection: "row",
-    height: "120px",
     alignItems: "center",
     gap: "16px",
-    padding: "16px",
     justifyContent: "space-between",
-    "@media (max-width: 600px)": {
-      flexDirection: "column",
-    },
+    width: "100%",
+    padding: "4px",
   },
   left: () => ({
     height: "100%",

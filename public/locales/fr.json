@@ -1,0 +1,58 @@
+{
+  "header": {
+    "title": "Emmanuel Rosa Sarachini de Oliveira",
+    "subtitle": "Ingénieur logiciel Full Stack",
+    "buttons": {
+      "about_me": "À propos de moi",
+      "resume": "CV",
+      "contact": "Contact",
+      "language": "Langue",
+      "projects": "Projets"
+    }
+  },
+  "profile_card": {
+    "name": "Emmanuel Rosa Sarachini de Oliveira",
+    "title": "Ingénieur logiciel Full Stack"
+  },
+  "landing_page": {
+    "language_dialog": {
+      "title": "Choisissez votre langue",
+      "lang_options": {
+        "en": "Anglais",
+        "pt_br": "Portugais brésilien",
+        "fr": "Français"
+      },
+      "button": "Confirmer"
+    }
+  },
+  "description_card": {
+    "title": "Salut! Je m'appelle Emmanuel 👋",
+    "subtitle": "Je suis un ingénieur Full Stack qui aime construire des produits délicieux et fiables !",
+    "resume_1": "Je suis un développeur logiciel chevronné avec plus de 8 ans d'expérience dans le domaine, contribuant actuellement mon expertise à Encora Inc. en tant que développeur Full Stack. Dans mon rôle actuel, je travaille à distance depuis Campinas, São Paulo, Brésil, travaillant sur divers projets principalement basés aux États-Unis. Mes responsabilités couvrent divers domaines tels que la communication en nuage et la gestion des installations.",
+    "resume_encora_title": "Encora Inc. (Juillet 2021 - Présent)",
+    "resume_encora_subtitle": "Ingénieur logiciel Full Stack à temps plein",
+    "resume_encora_details": "Travailler sur des projets pour des clients basés aux États-Unis dans des domaines tels que la communication en nuage et la gestion des installations. Maîtrise de JavaScript, TypeScript, HTML5, CSS, SCSS/SASS, et diverses bases de données, y compris Oracle, MongoDB, PostgreSQL et Amazon Aurora. Expérience avec des frameworks tels que Angular (7-12), Node.js (10-16), AngularJS, jQuery, VueJS et React. Bien versé dans les architectures de services Web RESTful et de services Web SOAP. Familier avec les méthodologies TDD utilisant Jest, RTL et Enzyme. Compétent dans l'estimation des points d'histoire, la collaboration d'équipe et l'analyse des branches épiques. Compétent dans les méthodologies Scrum.",
+    "resume_sonda_title": "SONDA (Avril 2018 - Juillet 2021)",
+    "resume_sonda_details": "Contribué pendant 3 ans et 4 mois, se spécialisant en JavaScript, TypeScript, Java, Angular Material, Oracle, MongoDB et divers frameworks. Possède une expertise dans les architectures de services Web RESTful et de services Web SOAP. Connaissance approfondie des outils de débogage et des frameworks tels que Apache Struts, EJB, JMS, Jax-RS, Jboss EAP 7.1, Jboss EAP 6.2. A travaillé avec Visual Studio, Eclipse, Android Studio, Git et SVN. Opéré sur les plates-formes Windows et Linux. A géré des projets avec les méthodologies Scrum, Cascata, CMMI et PMI.",
+    "resume_project_manager_title": "Chef de projet chez SONDA (Octobre 2015 - Avril 2018)",
+    "resume_project_manager_details": "A géré des projets en tant qu'analyste et chef de projet. A dirigé des projets dans la mobilité (Client-Side/Server-Side) et des solutions d'intégration en WS. A appliqué les domaines de connaissances du PMBOK et les meilleures pratiques du PMI, en utilisant le processus de documentation du niveau III du CMMI.",
+    "resume_analyst_title": "Analyste chez SONDA (Avril 2015 - Octobre 2017)",
+    "resume_analyst_details": "A travaillé en tant que chef de projet sur des Road Maps et des projets pour des clients du secteur de la mobilité. Responsable de la collecte des exigences, de la définition de la portée, de la planification du projet, du développement de prototypes, de l'exécution des tests et du suivi et de la clôture du projet. A appliqué la certification CMMI et la méthodologie PMBOK. A soutenu le développement de produits, les clients et la production. A mené des recherches pour des améliorations de produits et pour de nouvelles technologies. A collaboré avec des entrepreneurs tels que Akitabox, VMWare et IDEMIA.",
+    "resume_skills": "Compétent dans les méthodologies Agiles. Chef de projet certifié avec une expertise dans les processus PMBOK et CMMI. Solides compétences analytiques et de résolution de problèmes. Excellentes compétences en communication et en collaboration. Capable de gérer des projets de la conception à la livraison.",
+    "resume_2": "Je suis passionné par la mise en valeur de mes compétences pour contribuer à des projets innovants et fournir des solutions impactantes. Connectons-nous et explorons de nouvelles possibilités !"
+  },
+  "footer": {
+    "disclaimer": "© 2023 par Emmanuel Rosa Sarachini de Oliveira.",
+    "disclaimer2": "Ce site web est en cours de construction.",
+    "social_media": {
+      "call": "Appel",
+      "phone": "+55 11 97015-1808",
+      "email": "Écrire",
+      "email_address": "eoliveira95@gmail.com",
+      "follow": "Suivez-moi =]",
+      "linkedin": "https://www.linkedin.com/in/emmanuel-rosa-sarachini-de-oliveira-4a7b4874/",
+      "github": "https://github.com/Encora-Emmanuel",
+      "instagram": "https://instagram.com/maanusc"
+    }
+  }
+}

@@ -10,6 +10,8 @@ import React, {
 import { createTheme, ThemeProvider as MuiThemeProvider } from "@mui/material";
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { Color } from "../styles/colors";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n"; // Update the path as per your project structure
 
 const headerConfig = {
   fontFamily: ["'poppins'", "sans-serif"].join(","),
@@ -89,6 +91,13 @@ const CustomProvider: FunctionComponent<{ children?: ReactNode }> = ({
     showLanguageModal,
     setShowLanguageModal,
   };
+
+  const { i18n } = useTranslation();
+
+  // Load the translations dynamically when the language changes
+  React.useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language, i18n]);
 
   return (
     <ThemeContext.Provider value={themeContextValue}>
