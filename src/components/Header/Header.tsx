@@ -79,9 +79,17 @@ export const Header: FunctionComponent<headerProps> = ({
         </BottomNavigation>
       </Box>
       <Box component="section" sx={ss.right}>
-        <IconButton onClick={handleClick} sx={ss.buttons} aria-label="Language">
-          <LanguageIcon sx={{ fill: "#B238F2" }} />
-        </IconButton>
+        <BottomNavigation showLabels>
+          <BottomNavigationAction
+            sx={{ gap: "5px" }}
+            label={
+              <span style={{ display: "flex", gap: "5px" }}>
+                {t("header.buttons.language")}
+              </span>
+            }
+            icon={<LanguageIcon sx={{ fill: "#B238F2" }} />}
+          />
+        </BottomNavigation>
       </Box>
     </Box>
   );
