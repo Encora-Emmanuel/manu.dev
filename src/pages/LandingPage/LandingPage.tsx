@@ -18,6 +18,7 @@ import { Color } from "../../styles/colors";
 import { useTranslation } from "react-i18next";
 import { useLanguageContext } from "../../providers/CustomProvider";
 import { ProfileCard } from "../../components/ProfileCard/ProfileCard";
+import { Footer } from "../../components/Footer/Footer";
 
 export const LandingPage: FunctionComponent = () => {
   const { t } = useTranslation(["translation", "common"]);
@@ -92,16 +93,17 @@ export const LandingPage: FunctionComponent = () => {
             </FormControl>
           </DialogContent>
           <DialogActions sx={ss.actions}>
-            <Button
+            {/* <Button
               sx={ss.dialogButton}
               onClick={handleCloseLanguageDialog}
               data-testid="landingPage_languageDialog_button"
             >
               {t("landing_page.language_dialog.button")}
-            </Button>
+            </Button> */}
           </DialogActions>
         </Dialog>
       </Backdrop>
+      <Footer />
     </Box>
   );
 };
@@ -111,6 +113,10 @@ const ss = stylesheet({
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
+    height: "100vh",
+    "@media (max-width: 600px)": {
+      height: "100%",
+    },
   },
   profileCardWrapper: {
     flex: 1,

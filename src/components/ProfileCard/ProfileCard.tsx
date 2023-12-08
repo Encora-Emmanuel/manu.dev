@@ -10,10 +10,6 @@ import {
 import { stylesheet } from "../../styles/stylesheet";
 import { Color } from "../../styles/colors";
 
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-
 import ProfilePic from "../../assets/headshot.jpg";
 
 import { useTranslation } from "react-i18next";
@@ -31,35 +27,6 @@ export const ProfileCard: FunctionComponent = () => {
         <Typography sx={ss.title}>{t("profile_card.title")}</Typography>
         <Box sx={{ padding: "20px" }}>
           <DescriptionCard />
-        </Box>
-        <Typography sx={ss.actionText}>
-          {t("footer.social_media.follow")}
-        </Typography>
-        <Box sx={ss.actions}>
-          <IconButton
-            LinkComponent={Link}
-            href={t("footer.social_media.linkedin")}
-            target="_blank"
-            sx={ss.iconButton}
-          >
-            <LinkedInIcon />
-          </IconButton>
-          <IconButton
-            LinkComponent={Link}
-            href={t("footer.social_media.github")}
-            target="_blank"
-            sx={ss.iconButton}
-          >
-            <GitHubIcon />
-          </IconButton>
-          <IconButton
-            LinkComponent={Link}
-            href={t("footer.social_media.instagram")}
-            target="_blank"
-            sx={ss.iconButton}
-          >
-            <InstagramIcon />
-          </IconButton>
         </Box>
       </Box>
     </Fragment>
@@ -80,8 +47,8 @@ const ss = stylesheet({
     padding: "20px",
   },
   avatar: {
-    height: "200px",
-    width: "200px",
+    height: "150px",
+    width: "150px",
   },
   name: {
     fontSize: "24px",

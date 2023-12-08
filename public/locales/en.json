@@ -4,6 +4,7 @@
     "subtitle": "Full Stack Software Engineer",
     "buttons": {
       "about_me": "About Me",
+      "skills": "Skills",
       "resume": "Resume",
       "contact": "Contact",
       "language": "Language",
@@ -28,7 +29,7 @@
   "description_card": {
     "title": "Hi! I'm Emmanuel 👋",
     "subtitle": "I'm a full stack engineer that loves building delightful and dependable products!",
-    "resume_1": "I am a seasoned Software Developer Specialist with over 8 years of experience in the field, currently contributing my expertise to Encora Inc. as a Full Stack Developer. In my current role, I work remotely from Campinas, São Paulo, Brazil, engaging in diverse projects predominantly based in the United States. My responsibilities span various domains such as cloud communication and facilities management. Collaborated with contractors like Akitabox, VMWare, and IDEMIA.",
+    "resume_1": "I am a seasoned Software Developer Specialist with over 8 years of experience in the field, currently contributing my expertise to Encora Inc. as a Full Stack Developer. In my current role, I work remotely from Campinas, São Paulo, Brazil, engaging in diverse projects predominantly based in the United States. My responsibilities span various domains such as cloud communication and facilities management.",
     "resume_encora_title": "Encora Inc. (Jul 2021 - Present)",
     "resume_encora_subtitle": "Full-time Software Developer Specialist",
     "resume_encora_details": "Working on projects for U.S.-based clients in areas like cloud communication and facilities management. Proficient in JavaScript, TypeScript, HTML5, CSS, SCSS/SASS, and various databases including Oracle, MongoDB, PostgreSQL, and Amazon Aurora. Experienced with frameworks such as Angular (712), Node.js (1016), AngularJS, jQuery, VueJS, and React. Well-versed in Web Service RESTful and Web Service SOAP architectures. Familiar with TDD methodologies using Jest, RTL, and Enzyme. Skilled in estimation of story points, team collaboration, and analysis of epic branches. Proficient in Scrum methodologies.",

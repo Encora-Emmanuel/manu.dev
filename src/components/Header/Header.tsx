@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { FunctionComponent } from "react";
 import {
+  BottomNavigation,
+  BottomNavigationAction,
   Box,
-  Button,
-  Divider,
   IconButton,
-  Stack,
-  Typography,
 } from "@mui/material";
+
 import LanguageIcon from "@mui/icons-material/Language";
+import FeedIcon from "@mui/icons-material/Feed";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import AttractionsIcon from "@mui/icons-material/Attractions";
 
 import { Color } from "../../styles/colors";
 import { stylesheet } from "../../styles/stylesheet";
@@ -16,9 +18,21 @@ import { stylesheet } from "../../styles/stylesheet";
 import { useLanguageContext } from "../../providers/CustomProvider";
 import { useTranslation } from "react-i18next";
 
-export const Header: FunctionComponent = () => {
+export interface headerProps {
+  selectedButton: string;
+  setSelectedButton: (newValue: string) => void;
+}
+
+export const Header: FunctionComponent<headerProps> = ({
+  selectedButton,
+  setSelectedButton,
+}) => {
   const { setShowLanguageModal } = useLanguageContext();
   const { t } = useTranslation(["translation", "common"]);
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setSelectedButton(newValue);
+  };
 
   const handleClick = () => {
     setShowLanguageModal((prev) => !prev);
@@ -27,20 +41,42 @@ export const Header: FunctionComponent = () => {
   return (
     <Box sx={ss.container}>
       <Box component="section" sx={ss.left}>
-        {/* <div
-          style={{
-            height: "16px",
-            width: "16px",
-            background: Color.CoolBlue,
-            display: "flex",
-            alignSelf: "center",
-          }}
-        />
-        <Stack sx={ss.stack}>
-          <Typography sx={ss.title}>{t("header.title")}</Typography>
-          <Divider sx={ss.divider} />
-          <Typography sx={ss.subtitle}>{t("header.subtitle")}</Typography>
-        </Stack> */}
+        <BottomNavigation
+          showLabels
+          value={selectedButton}
+          onChange={handleChange}
+        >
+          <BottomNavigationAction
+            sx={{ gap: "5px" }}
+            label={
+              <span style={{ display: "flex", gap: "5px" }}>
+                {t("header.buttons.about_me")}
+              </span>
+            }
+            icon={<FeedIcon sx={{ fill: "#B238F2" }} />}
+            value={"about_me"}
+          />
+          <BottomNavigationAction
+            sx={{ gap: "5px" }}
+            label={
+              <span style={{ display: "flex", gap: "5px" }}>
+                {t("header.buttons.resume")}
+              </span>
+            }
+            icon={<AutoAwesomeMotionIcon sx={{ fill: "#B238F2" }} />}
+            value={"resume"}
+          />
+          <BottomNavigationAction
+            sx={{ gap: "5px" }}
+            label={
+              <span style={{ display: "flex", gap: "5px" }}>
+                {t("header.buttons.skills")}
+              </span>
+            }
+            icon={<AttractionsIcon sx={{ fill: "#B238F2" }} />}
+            value={"skills"}
+          />
+        </BottomNavigation>
       </Box>
       <Box component="section" sx={ss.right}>
         <IconButton onClick={handleClick} sx={ss.buttons} aria-label="Language">
