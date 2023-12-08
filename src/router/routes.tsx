@@ -6,19 +6,9 @@ export const routes: RouteObject[] = [
     path: "/",
     id: "root",
     async lazy() {
-      const { Layout } = await import("../pages/Layout/Layout");
-      return { Component: Layout };
+      const { LandingPage } = await import("../pages/LandingPage/LandingPage");
+      return { Component: LandingPage };
     },
-    children: [
-      {
-        path: "me",
-        async lazy() {
-          const { LandingPage } = await import(
-            "../pages/LandingPage/LandingPage"
-          );
-          return { Component: LandingPage };
-        },
-      },
-    ],
+    children: [],
   },
 ];
