@@ -13,17 +13,45 @@ export const Footer: FunctionComponent = () => {
   return (
     <Toolbar>
       <Box sx={ss.container}>
-        <Box component="section" sx={ss.left}>
-          <Box sx={ss.footerBox}>
+        <Box sx={ss.footerBox}>
+          <Typography sx={ss.disclaimerRight}>
+            {t("footer.social_media.follow")}
+          </Typography>
+          <Box sx={ss.footerBoxRightIcons}>
+            <IconButton
+              LinkComponent={Link}
+              href={t("footer.social_media.linkedin")}
+              target="_blank"
+            >
+              <LinkedInIcon />
+            </IconButton>
+            <IconButton
+              LinkComponent={Link}
+              href={t("footer.social_media.github")}
+              target="_blank"
+            >
+              <GitHubIcon />
+            </IconButton>
+            <IconButton
+              LinkComponent={Link}
+              href={t("footer.social_media.instagram")}
+              target="_blank"
+            >
+              <InstagramIcon />
+            </IconButton>
+          </Box>
+        </Box>
+        {/*<Box component="section" sx={ss.left}>
+           <Box sx={ss.footerBox}>
             <Typography sx={ss.disclaimer}>{t("footer.disclaimer")}</Typography>
             <Typography sx={ss.disclaimer}>
               {t("footer.disclaimer2")}
             </Typography>
-          </Box>
+          </Box> 
         </Box>
         <Box component="section" sx={ss.right}>
           <Box sx={ss.footerBoxRight}>
-            <Box sx={ss.footerBox}>
+            {/* <Box sx={ss.footerBox}>
               <Typography sx={ss.disclaimerRight}>
                 {t("footer.social_media.call")}
               </Typography>
@@ -35,7 +63,7 @@ export const Footer: FunctionComponent = () => {
                 {t("footer.social_media.email")}
               </Typography>
               <Typography>{t("footer.social_media.email_address")}</Typography>
-            </Box>
+            </Box> 
 
             <Box sx={ss.footerBox}>
               <Typography sx={ss.disclaimerRight}>
@@ -65,8 +93,7 @@ export const Footer: FunctionComponent = () => {
                 </IconButton>
               </Box>
             </Box>
-          </Box>
-        </Box>
+          </Box> */}
       </Box>
     </Toolbar>
   );
@@ -81,7 +108,7 @@ const ss = stylesheet({
     alignItems: "center",
     gap: "16px",
     padding: "16px",
-    justifyContent: "space-between",
+    justifyContent: "center",
     "@media (max-width: 600px)": {
       flexDirection: "column",
     },

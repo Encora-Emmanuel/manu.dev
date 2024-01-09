@@ -88,6 +88,7 @@ export const Header: FunctionComponent<headerProps> = ({
               </span>
             }
             icon={<LanguageIcon sx={{ fill: "#B238F2" }} />}
+            onClick={handleClick}
           />
         </BottomNavigation>
       </Box>
